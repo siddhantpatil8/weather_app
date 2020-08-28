@@ -4,7 +4,7 @@ const key = 'EXNBqHDPEbJ6xNrzr7W45LIw9nx11eSD';
 // get weather info
 getWeather = async (id) => {
 
-    const base = 'https://dataservice.accuweather.com/currentconditions/v1/';
+    const base = 'https://cors-anywhere.herokuapp.com/https://dataservice.accuweather.com/currentconditions/v1/';
     const query = `${id}?apikey=${key}`;
 
     const response = await fetch(base + query);
@@ -18,7 +18,7 @@ getWeather = async (id) => {
 // get city info
 const getCity = async (city) => {
 
-    const base = 'https://dataservice.accuweather.com/locations/v1/cities/search';
+    const base = 'https://cors-anywhere.herokuapp.com/https://dataservice.accuweather.com/locations/v1/cities/search';
     const query = `?apikey=${key}&q=${city}`;
 
     const response = await fetch(base + query);
